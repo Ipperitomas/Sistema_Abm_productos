@@ -1,0 +1,79 @@
+<!-- O este? -->
+<!-- Main Sidebar Container  -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+	<!-- Brand Logo -->
+	<a href="<?php echo BASE_URL; ?>" class="brand-link">
+		<!-- meter constante DIR_imgs -->
+		<img class="brand-image center" src="<?php echo URL_imgs; ?>logo.png">
+		<!-- <img src="{logo}"	 alt="" class="brand-image" style="opacity: .8"> -->
+		<span class="brand-text font-weight-light">Contabilidad Diaria</span> 
+	</a>
+
+  <div class="sidebar">
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+			<?php
+				$objeto_usuario->active_content = $objeto_contenido->id;
+				$menu = $objeto_usuario->Menu();
+
+				if (CanUseArray($menu)) {
+			?>
+				<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+						
+					<?php
+						foreach ($menu as $item) {
+							//ShowVar($item);
+							/*
+							$padreActivo = ($objeto_contenido->id == $item['id']) ||
+							    in_array($objeto_contenido->id, array_keys($item['childs']));
+							*/
+					?>
+						<li class="nav-item has-treeview <?php echo $item['active'] ? 'menu-open' : ''; ?>">
+							<a class="nav-link <?php echo $item['active'] ? 'active' : ''; ?>" href="<?php echo $item['url']; ?>" title="<?php echo $item['tooltip']; ?>">
+								<i class="nav-icon <?php echo $item['icon_collection'] . ' ' . $item['icon_class']; ?>"></i>
+								<p>
+									<?php echo $item['menutag']; ?>
+									<?php if (CanUseArray($item['childs'])) { ?>
+										<i class="right fas fa-angle-left"></i>
+									<?php } ?>
+								</p>
+							</a>
+
+							<?php
+								if (CanUseArray($item['childs'])) {
+									$childs = $item['childs'];
+							?>
+
+								<ul class="nav nav-treeview">								
+									<?php
+										foreach ($childs as $child) {
+											//$hijoActivo = $objeto_contenido->id == $child['id'];
+									?>
+									<li class="nav-item" style="margin-left:30px;">
+										<a class="nav-link <?php echo $child['active'] ? 'active' : ''; ?>" href="<?php echo $child['url']; ?>" title="<?php echo $child['tooltip']; ?>">
+										<?php //echo '<span class="'.$child['icon_collection'].'">'.$child['menu_icon'].'</span>';
+										echo '<i class="nav-icon '.$child['icon_collection']. " " . $child['icon_class']. '"></i>'; 
+										echo  '<p>'. $child['menutag']. '</p>'
+											?>
+										</a>
+									</li>
+									<?php
+										}
+									?>
+								</ul>
+							<?php
+								} // if
+							?>
+						</li>
+					<?php
+						} // foreach
+					?>
+				</ul>
+			<?php
+				}
+			?>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

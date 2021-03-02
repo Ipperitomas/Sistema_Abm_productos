@@ -1,0 +1,11 @@
+/system/config/access.config.inc.php
+/system/model/access.config.inc.php
+/logs/
+/temp/*.csv
+/*.log
+/node_modules/
+/downloaded/
+/css/maps
+/.idea/
+/tests/
+/system/config/*.json

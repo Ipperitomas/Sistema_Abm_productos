@@ -1,0 +1,18 @@
+<?php if (!is_null($head)) include($head); ?>
+<div class="wrapper">
+<?php
+	include($header);
+?>
+<main role="main" class="" id="main_<?php echo $objeto_contenido->alias; ?>">
+<div class="content-wrapper" style="margin-left: 0;">
+<div class="content-header">
+<div class="container-fluid">
+<?php if (!is_null($vista)) include($vista); ?>
+</div>
+</div>
+</div>
+</main>
+<footer class="main-footer" style="margin-left: 0;">
+<?php if (!is_null($footer)) include($footer); ?>
+</footer>
+</div>

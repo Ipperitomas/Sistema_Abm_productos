@@ -1,0 +1,21 @@
+<div class="pt-3">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <span for=""> Buscar </span>
+                    <input class="form-control" type="text" name="buscar" id="buscar" placeholder="Buscar Por Nombre" onkeyup="listado.Get(this);">
+                </div>
+                <div class="col-4"></div>
+                <div class="col-2 mt-4">
+                    <button class="btn btn-sm bg-gradient-primary float-right" title="Agregar Categoria..." onclick="ventana_agregarcategorias.Show()"> Agregar Categoria <i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div id="list_categorias">
+
+            </div>
+        </div>
+    </div>
+</div>

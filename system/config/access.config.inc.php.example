@@ -1,0 +1,21 @@
+<?php
+/*
+	Archivo de ejemplo para la configuración de la conexión al motor de base de datos.
+
+				¡COPIA ESTE ARCHIVO, NO LO RENOMBRES!
+
+*/
+// Datos de conexión con la base de datos.
+define('DBHOST', 'localhost'); // El host de la BD
+define('DBNAME', 'nombredelabasededatos'); // El nombre de la BD
+define('DBUSER', 'root'); // El user de la BD
+define('DBPASS', ''); // La contraseña de la BD
+define('DBPORT', 3306); // El puerto de MySQL.
+
+define("DBSSL",false); // La conexión es con SSL
+define("DBSSL_PATH",".\\system\includes\\certs\\"); // Directorio de los certificados
+define("DBSSL_KEY_PEM","client-key.pem");
+define("DBSSL_CERT_PEM","client-cert.pem");
+define("DBSSL_CA_PEM","server-ca.pem");
+
+?>

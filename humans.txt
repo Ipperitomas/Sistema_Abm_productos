@@ -1,0 +1,44 @@
+/* The Team */
+		______     _          _ _   
+		| ___ \   | |        (_) |  
+		| |_/ /___| |__  _ __ _| |_ 
+		|    // _ \ '_ \| '__| | __|
+		| |\ \  __/ |_) | |  | | |_ 
+		\_| \_\___|_.__/|_|  |_|\__|
+									
+				Rebrit SRL
+
+Rebrit SRL, Digital Solutions.
+San Martín 987, Gualeguaychú, Argentina.
+
+The Designer:
+	Lionel Seva.
+	Contact: lionel [dot] seva (at) rebrit [dot] net
+	From: Gualeguaychu, Entre Rios, Argentina
+	
+The Programmers:
+	Diego Romero
+	Contact: diego [dot] romero (at) rebrit [dot] net
+	From: Gualeguaychu, Entre Rios, Argentina
+
+	Daniela Capponi
+	Contact: daniela [dot] capponi (at) rebrit [dot] net
+	From: Bella Vista, Buenos Aires, Argentina
+
+	Gonza Leon
+	Contact: leongonzalojose (at) outlook [dot] es
+	From: Gualeguaychu, Entre Rios, Argentina
+
+	Tomás Ipperi
+	Contact: tipperi (at) ombufintech [dot] net
+	From: Gualeguaychu, Entre Rios, Argentina
+
+	Juampa
+	Contact: jrios (at) ombufintech [dot] net
+	From: Gualeguaychu, Entre Rios, Argentina
+
+/* The Site */
+	Languaje: Español rioplatence.
+	Docytpe: HTML5
+	Technologies: HTML5, CSS3, JavaScript, JQuery
+	IDE: Notepad++, Photoshop

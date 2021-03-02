@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="es-AR">
+	<meta charset="UTF-8">
+	<meta name="Author" content="RebritSRL" />
+	<meta name="AuthorLink" content="https://rebrit.ar/" />
+	<meta description="<?php echo @$objeto_contenido->description; ?>" />
+	<meta keywords="<?php echo @$objeto_contenido->keywords; ?>" />
+	<meta generator="RebritGenerator 1.7" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+
+<?php
+if (!empty($objeto_contenido->geo)) {
+	foreach ($objeto_contenido->geo as $key => $value) {
+?>
+	<meta name="geo.<?php echo $key; ?>" content="<?php echo $value; ?>" />
+<?php
+	} // foreach geo
+} // !empty geo
+?>
+
+<?php
+if (!empty($objeto_contenido->seo)) {
+	foreach ($objeto_contenido->seo as $key => $value) {
+?>
+	<meta property="og.<?php echo $key; ?>" content="<?php echo $value; ?>" />
+<?php
+	} // foreach seo
+} // !empty seo
+if (defined("DEPLOY") and (DEPLOY == 'DEV')) {
+?>
+	<meta name="robots" content="NOINDEX,NOFOLLOW">
+	<meta name="googlebot" content="noindex">
+<?php } else { ?>
+	<meta name="robots" content="INDEX,FOLLOW">
+<?php } ?>
+
+	<title><?php echo $objeto_contenido->GetTitulo(); ?></title>
+	
+	<base href="<?php echo BASE_URL; ?>" />
+	
+	<link rel="icon" type="image/png" href="<?php echo SITE_mainlogo; ?>" />
+	<link rel="author" type="text/plain" href="<?php echo SITE_humans; ?>" />
+<!--[if lte IE 8]>
+<script type="text/javascript" src="<?php echo BASE_URL."js"; ?>?f=html5"></script>
+<script type="text/javascript" src="<?php echo BASE_URL."js"; ?>?f=obsoleto"></script>
+<style type="text/css">
+article, aside, section, nav, header, footer {
+	display: block;
+}
+</style>
+<![endif]-->
+
+	<link rel="stylesheet" type="text/css" media="all" href="<?php 
+		echo BASE_URL."css/".$objeto_contenido->GetLink(false);
+	?>" />
+
+	<script type="text/javascript" src="<?php
+		echo BASE_URL."js/".$objeto_contenido->GetLink(false);
+		if (strpos(@$objeto_contenido->metadata->js,"autocomplete") !== FALSE) {
+			echo "/jquery.autocomplete/";
+		}
+	?>"></script>
+<?php
+if (!empty($objeto_contenido->customjs)) {
+	if (ExisteArchivo(DIR_common.$objeto_contenido->customjs)) {
+		require(DIR_common.$objeto_contenido->customjs);
+	} else {
+		if (ExisteArchivo($objeto_contenido->customjs)) {
+			require($objeto_contenido->customjs);
+		}
+	}
+}
+?>
+ 
+ <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> 
+ <script type="text/javascript">
+ var __cfRLUnblockHandlers = 1;
+ </script>
+</head>
+ <!--
+<body>
+	<p>Si puedes ver esto, es porque algo muy grave ha sucedido...</p>
+</body>
+-->
+<?php 
+if ($objeto_contenido->id == 2){
+	$body_class = 'login-page';
+} else {
+	$body_class = "layout-fixed layout-navbar-fixed sidebar-mini";
+}
+?>
+
+<body class=<?php echo '"'. $body_class .'"' ?>>

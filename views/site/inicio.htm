@@ -1,0 +1,28 @@
+<?php
+?>
+<div class="d-flex w-100 pt-5 pb-3" style="justify-content: space-evenly;">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title"> Ultimos Productos</h5>
+        </div>
+        <div class="card-body">
+            <div id="list_productos"></div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-info btn-sm float-right" onclick="window.location.href = '<?php echo BASE_URL; ?>productos/listado'"> Ir a Productos <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title"> Ultimas Categorías</h5>
+
+        </div>
+        <div class="card-body">
+            <div id="list_categorias"></div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-info btn-sm float-right" onclick="window.location.href = '<?php echo BASE_URL; ?>categorias/listado'"> Ir a Categorías <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
+</div>
