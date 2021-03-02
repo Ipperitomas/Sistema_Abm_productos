@@ -22,7 +22,8 @@ $language_cookie_name = str_replace(['=',',',';','\t','\r','\n',' '],'',APP_NAME
 if (isset($_COOKIE[$language_cookie_name]) and (!empty($_COOKIE[$language_cookie_name]))) {
 	$language = $_COOKIE[$language_cookie_name];
 } else {
-	$language = GetLangFromBrowser();
+	$language = DEFAULT_LANGUAGE;
+	// $language = GetLangFromBrowser();
 }
 
 //cLogging::Write($this_file.__LINE__." El lenguaje es: ".$language);
